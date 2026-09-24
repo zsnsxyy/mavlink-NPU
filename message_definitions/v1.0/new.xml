@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<mavlink>
+  <version>3</version>
+  <messages>
+    <message id="202" name="TEST">
+      <description>Vision recognition digits / manual strike target id. NUMBER2=1-4 selects TAR; vision uses 1-9 in all slots (0=uncertain); GCS manual strike: -1 / target / -1.</description>
+      <field type="int8_t" name="NUMBER1">Recognition digit 1, or -1 for manual strike</field>
+      <field type="int8_t" name="NUMBER2">Recognition digit 2 / target id 1-4</field>
+      <field type="int8_t" name="NUMBER3">Recognition digit 3, or -1 for manual strike</field>
+    </message>
+    <message id="203" name="GLOBAL_POSITION_NEW">
+      <description>Recognized target position from onboard computer (degE7). FC snaps to nearest preset TAR1-4.</description>
+      <field type="int32_t" name="lat" units="degE7">Latitude</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude</field>
+    </message>
+  </messages>
+</mavlink>
