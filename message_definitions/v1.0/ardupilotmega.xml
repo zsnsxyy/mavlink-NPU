@@ -1577,6 +1577,17 @@
       <field type="float" name="demanded_rate_y" units="rad/s">Demanded angular rate Y.</field>
       <field type="float" name="demanded_rate_z" units="rad/s">Demanded angular rate Z.</field>
     </message>
+    <message id="202" name="TEST">
+      <description>Vision digits or GCS manual strike (-1 / target 1-4 / -1).</description>
+      <field type="int8_t" name="NUMBER1">First digit 1-9, or -1 for manual strike.</field>
+      <field type="int8_t" name="NUMBER2">Second digit 1-9, or target id 1-4 for manual strike.</field>
+      <field type="int8_t" name="NUMBER3">Third digit 1-9, or -1 for manual strike.</field>
+    </message>
+    <message id="203" name="GLOBAL_POSITION_NEW">
+      <description>Recognized target position (degE7).</description>
+      <field type="int32_t" name="lat" units="degE7">Latitude.</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude.</field>
+    </message>
     <message id="214" name="GIMBAL_TORQUE_CMD_REPORT">
       <description>100 Hz gimbal torque command telemetry.</description>
       <field type="uint8_t" name="target_system">System ID.</field>
